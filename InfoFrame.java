@@ -2,6 +2,7 @@
 
 import javax.swing.*;
 import java.awt.*;
+import pieces.*;
 
 public class InfoFrame extends JFrame
 {
@@ -14,6 +15,8 @@ public class InfoFrame extends JFrame
 		setResizable(true);
 
 		this.add(panel);
+
+		Piece piece = new Piece(1, 1, 1, 1);
 	}
 
 	public static void main(String [] args)

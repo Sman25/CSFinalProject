@@ -1,4 +1,5 @@
 // Bomb
+package pieces;
 
 public class Bomb extends Piece
 {
