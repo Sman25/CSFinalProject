@@ -3,7 +3,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
 
 public class MenuPanel extends JPanel implements ActionListener
 {
@@ -13,6 +12,9 @@ public class MenuPanel extends JPanel implements ActionListener
 
 	public MenuPanel()
 	{
+		// Background image
+		JLabel thumb = new JLabel();
+		
 		binfo = new JButton("Game Info");
 		bstart = new JButton("Start Game");
 
@@ -21,6 +23,13 @@ public class MenuPanel extends JPanel implements ActionListener
 
 		this.add(binfo);
 		this.add(bstart);
+	}
+
+	@Override
+  	protected void paintComponent(Graphics g)
+  	{
+		super.paintComponent(g);
+		g.drawImage(Toolkit.getDefaultToolkit().createImage("lib/background.png"), 0, 0, null);
 	}
 
 	@Override
